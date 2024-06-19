@@ -64,7 +64,7 @@ if selected == "Academic Practice":
         return response.text
     
     def check_answer(problem, user_answer):
-        prompt = f"problem: {problem}\nUser's answer: {user_answer}\nIs the answer correct?"
+        prompt = f"problem: {problem}\nPlease provide your answer."
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(prompt)
         
