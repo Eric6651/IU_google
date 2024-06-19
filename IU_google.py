@@ -92,7 +92,7 @@ if selected == "Academic Practice":
 
     st.markdown('<p style="color:#000066; font-size:30px;font-family: Garamond;">Please Input Your Answer:</p>', unsafe_allow_html=True)
     user_answer = st.text_input("", st.session_state.user_answer)
-    st.markdown('<p style="color:#000066; font-size:15px;font-family: Garamond;">Press Enter to see Jess and Grace Comments :</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#000066; font-size:15px;font-family: Garamond;">Press Enter to See Jess and Grace Comments :</p>', unsafe_allow_html=True)
     
 
     if user_answer:
