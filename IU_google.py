@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
+from PIL import Image
+
+image_path = "ash.jpg"
+image = Image.open(image_path)
+
+
 
 st.set_page_config(
     page_title="",
@@ -12,7 +18,7 @@ st.set_page_config(
 
 col1, col2 = st.columns([28, 5])
 with col2:
-    st.image("ash.jpg",width=200)
+    st.image(image,width=200)
 with col1:
     st.markdown('<p style="color: #000066; font-size:50px;font-family: Garamond;">Jessica and Grace AI Hub(Beta)</p>', unsafe_allow_html=True)
 
