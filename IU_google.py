@@ -1,9 +1,5 @@
 import streamlit as st
 import pandas as pd
-import streamlit_option_menu
-from streamlit_option_menu import option_menu
-import openai
-from langchain.prompts import ChatPromptTemplate
 import google.generativeai as genai
 
 st.set_page_config(
@@ -28,12 +24,10 @@ with col1:
 with st.sidebar:
    st.markdown('<p style="color: #000066; font-size:30px;font-family: Arial;">AI Tools</p>', unsafe_allow_html=True) 
     
-   selected = option_menu(
-        menu_title="",  # Required to make it work
-        options=["Academic Practice","Other"],
-        icons=["book", "book"],
-        menu_icon="cast",
-        default_index=0,
+   selected = st.selectbox(
+      '',
+      ["Academic Practice", "Other"],
+      index=0
     )
     
 
