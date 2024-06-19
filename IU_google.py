@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
+from PIL import Image
+
+image_path = "ash.JPG"
+image = Image.open(image_path)
+
 
 
 st.set_page_config(
@@ -10,7 +15,16 @@ st.set_page_config(
 )
 
 
-st.markdown('<p style="color: #000066; font-size:50px;font-family: Garamond;">Jessica and Grace AI Hub(Beta)</p>', unsafe_allow_html=True)
+
+col1, col2 = st.columns([28, 5])
+with col2:
+    st.image(image,width=200)
+with col1:
+    st.markdown('<p style="color: #000066; font-size:50px;font-family: Garamond;">Jessica and Grace AI Hub(Beta)</p>', unsafe_allow_html=True)
+
+
+
+
 
 # Option menu
 with st.sidebar:
@@ -84,7 +98,7 @@ if selected == "Academic Practice":
         st.session_state.user_answer = user_answer
         st.session_state.result = check_answer(st.session_state.math_problem, st.session_state.user_answer)
     
-    st.markdown('<p style="color:#000066; font-size:30px;font-family: Garamond;">Result:</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#000066; font-size:30px;font-family: Garamond;">Jess and Grace Comments:</p>', unsafe_allow_html=True)
     st.write(st.session_state.result)
     
 
